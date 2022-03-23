@@ -1,0 +1,50 @@
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 600px;
+    margin: 20px auto;
+}
+
+th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 35px;
+    text-align: center;
+}
+
+#input-birth{
+    width: 600px;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#beginTime,#endTime{
+height: 35px;
+}
+
+#inpu-smt{
+    width: 50px;
+    height: 35px;
+    background-color: orange;
+    color: white;
+    border-radius: 4px;
+    border-width: 0;
+}
+
+img{
+    width: 290px;
+    height: 250px;
+}
+
+.div-img{
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 20px auto;
+}

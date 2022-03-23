@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yida.nginxdemo.dao.StudentDao">
+
+    <resultMap type="com.yida.nginxdemo.entity.Student" id="StudentMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" jdbcType="VARCHAR"/>
+        <result property="age" column="age" jdbcType="INTEGER"/>
+        <result property="birth" column="birth" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+
+    <select id="queryBirth" resultMap="StudentMap">
+        select
+        id, name, sex, age, birth
+        from student
+        <where>
+            <if test="beginTime != beginTime">
+                and birth &gt;= #{beginTime}
+            </if>
+            <if test="endTime != null and endTime != ''">
+                and birth &lt;= #{endTime}
+            </if>
+        </where>
+    </select>
+
+</mapper>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title[[${port}]]</title>
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.0.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
+    <script type="text/javascript" th:src="@{/My97DatePicker/WdatePicker.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="icon" th:href="@{/img/favicon.ico}">
+</head>
+<body>
+<div id="input-birth">
+     起始日期：<input type="text" name="beginTime" id="beginTime" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true,readOnly:true})">
+&nbsp;~ 结束日期 <input type="text" name="endTime" id="endTime" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true,readOnly:true})">
+<input type="button" value="搜 索" class="input-smt" id="inpu-smt">
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>生日</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<div class="div-img">
+<img th:src="@{/img/111.jpg}">
+<img th:src="@{/img/222.jpg}">
+</div>
+</body>
+</html>
